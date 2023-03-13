@@ -214,3 +214,174 @@
     color: var(--clr-neutral-900);
     text-decoration: none;
   }
+
+.nav-list a:focus,
+.nav-list a:hover {
+  color: var(--clr-primary-400);
+  text-decoration: underline;
+}
+
+/* //////////////////////
+  Footer
+  /////////////////////// */
+
+.site-footer {
+  --logo-color: currentColor;
+  padding: 2em 0;
+  color: var(--clr-neutral-100);
+  background-color: var(--clr-primary-500);
+  text-align: center;
+}
+
+/* //////////////////////
+  Homepage
+  /////////////////////// */
+
+.hero > div {
+  display: grid;
+  grid-auto-flow: row;
+  grid-auto-columns: 1fr;
+  align-items: center;
+  gap: 3em;
+}
+
+.hero__image {
+  width: 100%;
+  /* max-height: max(15rem, 40vh); */
+  object-fit: cover;
+}
+
+@media (min-width: 45em) {
+  .hero > div {
+    grid-auto-flow: column;
+  }
+}
+
+.featured-articles {
+  background-color: var(--clr-primary-200);
+}
+
+.articles__list {
+  --flow-spacer: 3rem;
+  margin: 6rem 0;
+}
+
+/* //////////////////////
+  Individual article page
+  /////////////////////// */
+
+  .main-article {
+    margin-bottom: 3rem;
+  }
+
+  .main-article__figure figcaption {
+    margin: 1rem 0;
+    font-size: var(--fs-300);
+    opacity: .9;
+  }
+
+/* //////////////////////
+  Article snippets
+  /////////////////////// */
+
+.snippet {
+  display: grid;
+  gap: 1em;
+  grid-template-areas:
+    "image"
+    "title"
+    "meta"
+    "body"
+    "button";
+}
+
+.snippet__image {
+  grid-area: image;
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+}
+.snippet__title {
+  grid-area: title;
+}
+.snippet__meta {
+  grid-area: meta;
+  color: var(--clr-neutral-300);
+}
+
+.snippet__meta span {
+  color: var(--clr-neutral-900);
+}
+
+.snippet .btn {
+  grid-area: button;
+}
+
+.snippet__title {
+  color: var(--clr-neutral-900);
+  font-size: var(--fs-500);
+}
+
+.snippet__title a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.snippet__title a:hover,
+.snippet__title a:focus {
+  color: var(--clr-primary-500);
+} 
+
+@media (min-width: 45em) {
+  .snippet {
+    grid-template-areas:
+      "title image"
+      "meta image"
+      "body image"
+      "button image";
+    grid-column-gap: 4em;
+    grid-template-columns: 1fr 40%;
+    grid-template-rows: min-content min-content min-content 1fr;
+  }
+}
+
+.btn {
+  cursor: pointer;
+  text-decoration: none;
+  display: inline-block;
+  line-height: 1;
+  padding: 0.75em 1.75em;
+  border-radius: 0.25em;
+  align-self: start;
+  justify-self: start;
+}
+
+.btn:focus {
+  outline: 0.125em solid var(--clr-primary-400);
+  outline-offset: 0.25em;
+}
+
+.btn--primary {
+  background: var(--clr-primary-400);
+  color: var(--clr-neutral-100);
+  font-weight: var(--fw-700);
+  border: 2px solid var(--clr-primary-400);
+}
+.btn--primary:hover,
+.btn--primary:focus {
+  background: var(--clr-primary-500);
+  border-color: var(--clr-primary-500); 
+}
+
+.btn--neutral {
+  background-color: var(--clr-neutral-100);
+  color: var(--clr-neutral-900);
+  font-weight: var(--fw-700);
+  border: 2px solid var(--clr-neutral-900);
+}
+
+.btn--neutral:hover,
+.btn--neutral:focus {
+  color: var(--clr-neutral-100);
+  background-color: var(--clr-neutral-900);
+}
