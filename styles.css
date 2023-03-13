@@ -1,0 +1,16 @@
+#header {
+    font-size: xx-large;
+    text-align: center;
+    font-style: italic;
+  }
+
+  #fixedbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 33px;
+    background-color: gray;
+    padding: 10px;
+    text-align: center;
+  }
