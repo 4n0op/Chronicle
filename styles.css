@@ -1,82 +1,216 @@
-/*
-
-HEADER
-
-*/
-
-#header {
-    font-size: xx-large;
-    text-align: center;
-    font-style: italic;
-  }
-
-/*
-
-LINE
-
-*/
-
-#line {
-    height: 1px;
-    width: 100%;
-    background-color: black;
-  }
-
-/*
-
-NAVBAR
-
-*/
-  navbar {
-    background-color: black;
-    padding: 20px 0;
+:root {
+    --fs-300: 0.9375rem;
+    --fs-400: 1.0625rem;
+    --fs-500: 1.375rem;
+    --fs-600: 1.875rem;
+    --fs-700: 2rem;
+  
+    --ff-body: "Roboto", sans-serif;
+    --ff-heading: "Playfair Display", serif;
+  
+    --fw-400: 400;
+    --fw-700: 700;
+    --fw-900: 900;
+  
+    --clr-primary-200: hsla(169, 70%, 95%, 1);
+    --clr-primary-300: hsla(169, 100%, 39%, 1);
+    --clr-primary-400: hsla(169, 100%, 26%, 1);
+    --clr-primary-500: hsla(169, 100%, 16%, 1);
+  
+    --clr-neutral-100: hsla(0, 0%, 100%, 1);
+    --clr-neutral-300: hsla(0, 0%, 50%, 1);
+    --clr-neutral-400: hsla(0, 0%, 40%, 1);
+    --clr-neutral-500: hsla(0, 0%, 60%, 1);
+    --clr-neutral-900: hsla(0, 0%, 10%, 1);
   }
   
-  #navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    position: fixed;
-    font-style: italic;
+  @media (min-width: 35em) {
+    :root {
+      --fs-300: 1rem;
+      --fs-400: 1.125rem;
+      --fs-500: 1.5rem;
+      --fs-600: 2.25rem;
+      --fs-700: 3rem;
+    }
   }
   
-  #navbar ul {
+  /* //////////////////////
+    RESET - source: https://piccalil.li/blog/a-modern-css-reset
+    /////////////////////// */
+  
+  /* Box sizing rules */
+  *,
+  *::before,
+  *::after {
+    box-sizing: border-box;
+  }
+  
+  /* Remove default margin */
+  body,
+  h1,
+  h2,
+  h3,
+  h4,
+  p,
+  figure,
+  blockquote,
+  dl,
+  dd {
+    margin: 0;
+  }
+  
+  /* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+  ul:where([role="list"]),
+  ol:where([role="list"]) {
     list-style: none;
-    display: flex;
     margin: 0;
     padding: 0;
   }
   
-  #navbar a {
-    color: white;
+  /* Set core root defaults */
+  html:focus-within {
+    scroll-behavior: smooth;
+  }
+  
+  /* Set core body defaults */
+  body {
+    min-height: 100vh;
+    text-rendering: optimizeSpeed;
+    line-height: 1.5;
+  }
+  
+  /* A elements that don't have a class get default styles */
+  a:not([class]) {
+    text-decoration-skip-ink: auto;
+  }
+  
+  /* Make images easier to work with */
+  img,
+  picture {
+    max-width: 100%;
+    display: block;
+  }
+  
+  /* Inherit fonts for inputs and buttons */
+  input,
+  button,
+  textarea,
+  select {
+    font: inherit;
+  }
+  
+  /* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+  @media (prefers-reduced-motion: reduce) {
+    html:focus-within {
+      scroll-behavior: auto;
+    }
+  
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+      scroll-behavior: auto !important;
+    }
+  }
+  
+  /* //////////////////////
+    General styling
+    /////////////////////// */
+  
+  body {
+    font-family: var(--ff-body);
+    font-size: var(--fs-400);
+    color: var(--clr-neutral-900);
+  }
+  
+  h1,
+  h2,
+  h3 {
+    font-family: var(--ff-heading);
+    font-weight: var(--fw-900);
+    line-height: 1.1;
+  }
+  
+  strong {
+    font-weight: var(--fw-700);
+  }
+  
+  section,
+  .section {
+    padding: min(10vh, 10em) 0;
+  }
+  
+  
+  
+  /* //////////////////////
+    Utility Classes
+    /////////////////////// */
+  
+  /* select all direct childen of .flow
+     and add margin to the top for proper
+     spacing */
+  
+  .flow > *:where(:not(:first-child)) {
+    margin-top: var(--flow-spacer, 1em);
+  }
+  
+  .container {
+    margin-inline: auto;
+    padding-inline: 1.5em;
+    max-width: 72rem;
+  }
+  
+  .container--narrow {
+    max-width: 65rem;
+  }
+  
+  .flex-group {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--gap, 1em);
+  }
+  
+  .text-center {
+    text-align: center;
+  }
+  
+  /* typgraphy */
+  
+  .article-title,
+  .section-title {
+    color: var(--clr-primary-500);
+  }
+  
+  .article-title {
+    font-size: var(--fs-700);
+  }
+  
+  .section-title {
+    font-size: var(--fs-600);
+  }
+  
+  
+  /* //////////////////////
+    Header
+    /////////////////////// */
+  
+  .page-header {
+    padding: 2em 0;
+  }
+  
+  .page-header__content {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .nav-list {
+    margin: 0;
+    padding: 0;
+  }
+  
+  .nav-list a {
+    color: var(--clr-neutral-900);
     text-decoration: none;
-    padding: 20px;
-    font-size: 18px;
-    transition: all 0.3s ease-in-out;
-  }
-  
-  #navbar a:hover {
-    background-color: white;
-    color: black;
-  }
-  
-  #navbar .burger {
-    display: none;
-    cursor: pointer;
-  }
-  
-  @media (max-width: 992px) {
-    #navbar {
-      flex-direction: column;
-      align-items: center;
-    }
-  
-    #navbar ul {
-      flex-direction: column;
-    }
-  
-    #navbar a {
-      padding: 15px;
-      text-align: center;
-    }
   }
