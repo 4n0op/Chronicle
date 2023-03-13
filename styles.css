@@ -1,11 +1,82 @@
+/*
+
+HEADER
+
+*/
+
 #header {
     font-size: xx-large;
     text-align: center;
     font-style: italic;
   }
 
+/*
+
+LINE
+
+*/
+
 #line {
     height: 1px;
     width: 100%;
     background-color: black;
+  }
+
+/*
+
+NAVBAR
+
+*/
+  navbar {
+    background-color: black;
+    padding: 20px 0;
+  }
+  
+  #navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    font-style: italic;
+  }
+  
+  #navbar ul {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+  }
+  
+  #navbar a {
+    color: white;
+    text-decoration: none;
+    padding: 20px;
+    font-size: 18px;
+    transition: all 0.3s ease-in-out;
+  }
+  
+  #navbar a:hover {
+    background-color: white;
+    color: black;
+  }
+  
+  #navbar .burger {
+    display: none;
+    cursor: pointer;
+  }
+  
+  @media (max-width: 992px) {
+    #navbar {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    #navbar ul {
+      flex-direction: column;
+    }
+  
+    #navbar a {
+      padding: 15px;
+      text-align: center;
+    }
   }
