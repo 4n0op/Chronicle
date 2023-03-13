@@ -4,13 +4,8 @@
     font-style: italic;
   }
 
-  #fixedbar {
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    height: 33px;
-    background-color: gray;
-    padding: 10px;
-    text-align: center;
+#line {
+    height: 1px;
+    width: 100%;
+    background-color: black;
   }
