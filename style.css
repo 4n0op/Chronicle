@@ -1,3 +1,19 @@
+/*-----------------------------------*\ 
+  #style.css
+\*-----------------------------------*/
+
+/**
+ * copyright 2022 @codewithsadee 
+ */
+
+
+
+
+
+/*-----------------------------------*\ 
+  #CUSTOM PROPERTY
+\*-----------------------------------*/
+
 .light-theme {
 
     /**
@@ -64,3 +80,26 @@
     --py: 5rem;
   
   }
+  
+  
+  
+  
+  
+  /*-----------------------------------*\ 
+    #RESET
+  \*-----------------------------------*/
+  
+  *, *::before, *::after {
+    margin:  0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  a { text-decoration: none; }
+  
+  li { list-style: none; }
+  
+  img, button { display: block; }
+  
+  a, span { display: inline-block; }
+  
