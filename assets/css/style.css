@@ -3,12 +3,8 @@
 \*-----------------------------------*/
 
 /**
- * copyright 2022 @codewithsadee 
+ * copyright 2022 @4n0op
  */
-
-
-
-
 
 /*-----------------------------------*\ 
   #CUSTOM PROPERTY
@@ -81,10 +77,6 @@
 
 }
 
-
-
-
-
 /*-----------------------------------*\ 
   #RESET
 \*-----------------------------------*/
@@ -118,7 +110,6 @@ html {
 
 :focus { outline-offset: 4px; }
 
-
 /**
  * scrollbar style
  */
@@ -139,10 +130,6 @@ html {
 .light-theme::-webkit-scrollbar-track { background: hsl(0, 0%, 90%); }
 
 .dark-theme::-webkit-scrollbar-track { background: hsl(219, 27%, 20%); }
-
-
-
-
 
 /*-----------------------------------*\ 
   #BASE STYLE
@@ -180,10 +167,6 @@ html {
 
 .text-tiny { font-size: var(--fs-5); }
 
-
-
-
-
 /*-----------------------------------*\ 
   #REUSED STYLE
 \*-----------------------------------*/
@@ -219,10 +202,6 @@ html {
 
 .btn-secondary:hover { border-color: var(--accent); }
 
-
-
-
-
 /*-----------------------------------*\ 
   #Extra style for dark theme
 \*-----------------------------------*/
@@ -242,9 +221,6 @@ html {
 .dark-theme .load-more:hover { color: var(--white); }
 
 .dark-theme .aside .h2 { color: var(--foreground-primary); }
-
-
-
 
 /*-----------------------------------*\ 
   #HEADER
@@ -340,11 +316,7 @@ header .btn-group {
 }
 
 .mobile-nav .nav-link:hover { color: var(--accent); }
-
-
-
-
-
+  
 /*-----------------------------------*\ 
   #HERO SECTION
 \*-----------------------------------*/
@@ -380,10 +352,6 @@ header .btn-group {
 }
 
 .hero .right { display: none; }
-
-
-
-
 
 /*-----------------------------------*\ 
   #BLOG SECTION
@@ -1018,7 +986,7 @@ footer .wrapper { text-align: center; }
     margin-inline: auto;
     margin: auto; /* fallback for margin-inline */
   }
-  
+
   /**
    * FOOTER 
    */
