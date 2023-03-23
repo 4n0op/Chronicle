@@ -791,7 +791,8 @@ footer .wrapper { text-align: center; }
   }
 
   .hero .img-box {
-    position: relative;
+    align-items: center;
+    /*position: relative;*/
     z-index: 2;
   }
 
