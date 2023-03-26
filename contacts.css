@@ -41,7 +41,22 @@
     text-transform: capitalize;
     margin-bottom: 25px;
     letter-spacing: 2px;
+}
 
+.anoop-name {
+    color: white;
+    font-size: 20px;
+    text-transform: capitalize;
+    margin-bottom: 25px;
+    letter-spacing: 2px;
+}
+
+.aasrith-name {
+    color: #f9004d;
+    font-size: 20px;
+    text-transform: capitalize;
+    margin-bottom: 25px;
+    letter-spacing: 2px;
 }
 
 span {
